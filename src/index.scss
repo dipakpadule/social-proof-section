@@ -1,0 +1,39 @@
+$Mobile: 23.43rem;
+$Desktop: 90rem;
+
+$Very-Dark-Magenta: hsl(300, 43%, 22%);
+$Soft-Pink: hsl(333, 80%, 67%);
+
+$Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+$Light-Grayish-Magenta: hsl(300, 24%, 96%);
+$White: hsl(0, 0%, 100%);
+
+$Font-size: 0.9rem;
+
+$Font-Family: 'League Spartan';
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: $Font-Family;
+
+  background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+  background-position: left 3% top 0%, right -2% bottom 0%;
+  background-repeat: no-repeat no-repeat;
+}
+
+@media screen and (max-width: 90rem) {
+  body{
+    background-position: left 19% top 0%, right 23% bottom 0%;
+  }
+}
