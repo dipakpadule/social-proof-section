@@ -1,0 +1,157 @@
+$Mobile: 23.43rem;
+$Desktop: 90rem;
+
+$Very-Dark-Magenta: hsl(300, 43%, 22%);
+$Soft-Pink: hsl(333, 80%, 67%);
+
+$Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+$Light-Grayish-Magenta: hsl(300, 24%, 96%);
+$White: hsl(0, 0%, 100%);
+
+$Font-size: 0.9rem;
+
+$Font-Family: 'League Spartan';
+$regular:400;
+$medium:500;
+$bold:700;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sp-card{
+  width: 69.36rem;
+  height: 37.5rem;
+  // border: 1px solid black;
+  background: $White;
+  
+  //top section
+  .sp-card-top{
+    width: 69.375rem;
+    height: 18.75rem;
+    // border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: relative;
+
+    .sp-card-top-summary{
+      grid-area: 1 / 1 / 2 / 2;
+      h1{
+        color: $Very-Dark-Magenta;
+        font-weight: $bold;
+        font-size: 4rem;
+        padding-right: 2rem;
+        margin-top: 1rem;
+      }
+      p{
+        color: $Very-Dark-Magenta;
+        font-weight: $regular;
+        font-size: 1.2rem;
+        padding-right: 3rem;
+        margin-top: 1rem;
+        line-height: 1.2rem;
+      }
+    }
+    .sp-card-top-ratings {
+      grid-area: 1 / 2 / 2 / 3;
+      .spc-rating-card{
+        width: 27.87rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: $Light-Grayish-Magenta;
+        border-radius: 0.4rem;
+        .star{
+          width: 6.2rem;
+          height: 1.30rem;
+          background-image: url(./images/icon-star.svg);
+          background-size: 1.25rem 1.25rem;
+        }
+        h3{
+          color: $Very-Dark-Magenta;
+        }
+      }
+    }
+    .rate1{
+      position: absolute;
+      top: 2.85rem;
+      left: 0.9rem;
+    }
+    .rate2 {
+      position: absolute;
+      top: 4.43rem;
+      left: 3.18rem;
+    }
+    .rate3 {
+      position: absolute;
+      top: 8.8rem;
+      right: -5.8rem;
+    }
+  }
+
+  //bottom reviews
+  .sp-card-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    color: $Light-Grayish-Magenta;
+    position: relative;
+
+    .sp-card-reviews{
+      width: 21.87rem;
+      height: 14.56rem;
+      background: $Very-Dark-Magenta;
+      border-radius: 0.375rem;
+      padding: 2.2rem 2rem;
+
+      .sp-card-reviews-details{
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.7rem;
+        img{
+          border-radius: 50%;
+          margin-right: 1.25rem;
+        }
+        .sp-card-user{
+          h2{
+            margin-bottom: 0.6rem;
+          }
+        }
+      }
+      span{
+        color: $Soft-Pink;
+        font-weight: $regular;
+        font-size: 1.2rem;
+      }
+      h2{
+        font-weight: $medium;
+        font-size: 1.5rem;
+      }
+      .sp-card-review{
+        font-weight: $regular;
+        font-size: $Font-size;
+        line-height: 1.3rem;
+      }
+    }
+    .rv1{
+      position: absolute;
+      top: 0rem;
+    }
+    .rv2{
+      position: absolute;
+      top: 2rem;
+      left: 23.7rem;
+    }
+    .rv3{
+      position: absolute;
+      top: 4.1rem;
+      right: 0rem;
+    }
+  }
+}
